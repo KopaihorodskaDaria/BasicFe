@@ -1,0 +1,55 @@
+.trafficLight{
+  height: 190px;
+  width: 65px;
+  background-color: gray;
+  border: 2px solid black;
+  border-radius: 10%;
+}
+.circle{
+width: 40px; 
+height: 40px;
+margin: 10px;
+border-radius: 50%;
+border: 2px solid black;
+position: relative;
+top: 10px;
+}
+
+#one{
+  background: red; 
+}
+
+#two{
+  background: yellow;
+}
+
+#three{
+  background: green;
+}
+.trafficLight2{
+  height: 190px;
+  width: 65px;
+  background-color: gray;
+  border: 2px solid black;
+  border-radius: 10%;
+}
+.circle2{
+width: 40px; 
+height: 40px;
+margin: 10px;
+border-radius: 50%;
+border: 2px solid black;
+transform: scale(0.9) translate(2px, 5px);
+}
+
+#one2{
+  background: red; 
+}
+
+#two2{
+  background: yellow;
+}
+
+#three2{
+  background: green;
+}
