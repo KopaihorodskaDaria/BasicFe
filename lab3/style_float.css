@@ -1,0 +1,42 @@
+body{
+	background: #6495ED;
+	color: black;
+	font-family:  Times New Roman;
+	font-size: 22px;
+	margin: 0px;
+}
+
+#header{
+	background: #6495ED;
+	height: 10%;
+	width: 100%;
+}
+
+#content_right{
+	background: #B0E0E6;
+	height: 80%;
+	width: 50%;
+	float: right;
+}
+
+#content_left{
+	background: #9370DB;
+	height: 80%;
+	width: 50%;
+	float: left;
+}
+#clear{
+	clear: both;
+}
+
+#footer{
+	background: #6495ED;
+	height: 10%;
+	width: 100%;
+}
+.center-img {
+  	display: block;
+  	margin-left: auto;
+  	margin-right: auto;
+ 	width: 50%;
+}

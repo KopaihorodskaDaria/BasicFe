@@ -1,0 +1,46 @@
+
+      html,
+      body {
+        padding: 0;
+        margin: 0;
+        font-family:  arial;
+      }
+
+      body {
+        color: white;
+        font-size: 1.1em;
+        padding: 1em;
+        display: flex;
+        flex-direction: column;
+      }
+
+      main {
+        display: flex;
+        min-height: 100%;
+        flex: 1 1 auto;
+      }
+
+      article {
+        flex: 2 2 12em;
+        padding: 1em;
+      }
+
+      #right{
+        background-color:   #9400D3;
+      }
+      #left{
+        background-color: #ADD8E6;
+        color: black;
+      }
+
+          .center-img {
+      text-align: center;
+      }
+
+      header,
+      footer {
+        flex: 0 0 5em;
+        background-color:#00BFFF;
+      }
+
+  
