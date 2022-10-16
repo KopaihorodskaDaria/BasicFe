@@ -4,7 +4,7 @@ const colors = ['salmon', 'green', 'blue', 'purple', 'yellow', 'white', 'blue', 
 
 function myFunction1() {
   
-  /* метод getElementById ()*/
+  /* функція, яка змінює колір фону та тексту елемента. Використовуємо метод getElementById ()*/
   var el=document.getElementById("element1");
  
   index = index >= colors.length - 1 ? 0 : index + 1;
@@ -13,8 +13,7 @@ function myFunction1() {
 }
 
 function myFunction2() {
-
-    /* метод querySelector ()*/
+/* функція, яка змінює колір фону та тексту елемента. Використовуємо метод метод querySelector ()*/
   var element = document.querySelector("#element2");
 
   index = index >= colors.length - 1 ? 0 : index + 1;
@@ -45,14 +44,14 @@ function reduceImg(){
 }
 
 function deleteImg(){
-  /* налаштували елемент з ідентифікатором id="img" використовуючи none, так щоб не відображався*/
+  /* налаштували елемент з ідентифікатором id="img" використовуючи none, так щоб він не відображався*/
    let image = document.getElementById("img");
    image.style.display = 'none';
     
 }
 
 function addImg() {
-   
+   /* налаштували елемент з ідентифікатором id="img" використовуючи block*/
    let image = document.getElementById("img");
    image.style.display = 'block';
     
