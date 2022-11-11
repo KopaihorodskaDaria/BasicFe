@@ -1,0 +1,43 @@
+body{
+	display: flex;
+	width: max-content;
+	padding: 0px;
+	margin: 0 auto;
+	background-color: #b6f2ef ;
+
+}
+div#Form{
+  border:5px solid #f7B733;
+  width: 350px;
+  border-radius: 7px;
+  margin: 15px;
+  padding: 10px;
+  margin-bottom: 30px;
+  background-color: #c189f5;
+  text-align: left;
+  flex-direction: column;
+
+}
+button{
+
+  color:black;
+  width: 50px;
+  padding: 5px 0;
+}
+
+h3{
+	text-align: center;
+}
+
+
+input{
+	margin: 10px 0;
+	padding: 10px;
+	box-sizing: border-box;
+	width:100%
+}
+
+::placeholder{
+	color: #636161;
+}
+
