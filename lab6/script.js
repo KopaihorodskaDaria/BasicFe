@@ -1,26 +1,39 @@
-const container = document.getElementById('container');
+const maybeError = document.getElementById('maybeError');
+const button = document.getElementById('add-button');
+let url = 'https://randomuser.me/api';
 
-			async function getPerson(){
-				const url = 'https://randomuser.me/api';
-				const response = await fetch(url, {method: 'GET', });
+button.addEventListener('click', ()=>{
+	fetch(url)
+	.then((response)=>response.json())
+	.then((data)=>display(data))
+	.catch(error => maybeError.innerHTML = error);
+});
 
-				const responseResult= await response.json();
-				return responseResult.results[0];
-			}
+function download(data){
+	information = data['results'][0];
+	profile =document.createElement('div');
+	profile.setAttribute('id', 'profile');
 
-			async function download(){
-				const person = await getPerson();
+	let image = document.createElement('img');
+	image.scr=information['picture']['large'];
+	profile.appendChild(image);
 
-				const temple = `
-					<div class ="card">
-						<div><img scr = "${person.picture.medium}" alt=""></div>
-						<div>
-							<p><b>city:${person.location.city}</p>
-							<p><b>country:${person.location.country}</p>
-							<p><b>name:${person.name}</p>
-							<p><b>postcode:${person.location.postcode}</p>
-						</div>
-					</div>`;
+	let city = document.createElement('p');
+	image.innerHTML=`City: ${information['location']['city']}`;
+	profile.appendChild(city);
 
-				container.insertAdjacentHTML('afterbegin', temple);
-			}
+	let country = document.createElement('p');
+	image.innerHTML=`Country: ${information['location']['country']}`;
+	profile.appendChild(country);
+
+	let name = document.createElement('p');
+	image.innerHTML=`Name: ${information['name']}`;
+	profile.appendChild(name);
+
+	let postcode = document.createElement('p');
+	image.innerHTML=`Postcode: ${information['location']['postcode']}`;
+	profile.appendChild(postcode);
+
+    document.getElementById('information').appendChild(profile)
+    maybeError.innerHTML='Success!'
+}
