@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>JavaScript. Формат JSON. API. Отримання даних із зовнішньої сторінки</title>
+	<link rel ="stylesheet" href = "style.css">
+</head>
+<body> 
+	    <main>
+			<button type="button" class ="Download"> download </button>
+			<section class="infoCards"></section>
+		</main>
+<script>
+
+async function getInfoAboutPerson() {
+    const response = await fetch('https://randomuser.me/api/');
+    const { results: [person] } = await response.json();
+    return {
+        imageLink: person.picture.large,
+        name: `${person.name.first} ${person.name.last}`,
+        city: person.location.city,
+        country: person.location.country,
+        postcode: person.location.postcode,
+        
+    };
+};
+
+document.querySelector('.Download').addEventListener('click', async (event) => {
+    event.target.disabled = true;
+    const { imageLink,name, city, country, postcode} = await getInfoAboutPerson();
+    const card = document.createElement('div');
+
+    card.classList.add('card');
+
+    card.innerHTML = `
+        <img class="card-image" src="${imageLink}" alt="card-image">
+        <div class="card-text">Name:&nbsp;<span>${name}</span></div>
+        <div class="card-text">City:&nbsp;<span>${city}</span></div>
+        <div class="card-text">Country:&nbsp;<span>${country}</span></div>
+        <div class="card-text">Postcode:&nbsp;<span>${postcode}</span></div>
+    `
+    document.querySelector('.infoCards').append(card);
+
+    event.target.disabled = false;
+});
+
+</script>
+</body>
+</html>
