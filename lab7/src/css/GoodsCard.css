@@ -1,0 +1,29 @@
+.card {
+    margin: 15px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+i{
+    font-family: Impact, fantasy;
+}
+
+.card .sneakers {
+    background-color: #cbb4f8;
+    text-align: center;
+    padding: 10px;
+    margin: 15px;
+    width: 220px;
+    height: 320px;
+    transition: transform ease-in-out 150ms;
+}
+
+.sneakers_img{
+    width: 170px;
+    height: 200px;
+}
+
+.card .sneakers:hover {
+    transform: scale(1.05);
+}

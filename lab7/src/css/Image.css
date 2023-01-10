@@ -1,0 +1,27 @@
+button{
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 12px;
+}
+button:hover{
+    cursor: pointer;
+    background-color: #ffe95d;
+}
+button:active{
+    background-color: #ffe100;
+    color: white;
+}
+img{
+    height: 250px;
+    width: 410px;
+}
+ body{
+     padding-left: 20px;
+     background: #def1c8;
+ }
